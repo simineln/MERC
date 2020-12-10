@@ -5,13 +5,13 @@
   <div class="col-md-12 table-responsive">
 
     <h4>
-        <%= image_tag('chevron-right', class: 'menu_icon') + @meter.region.name %>
+      <%= image_tag('chevron-right', class: 'menu_icon') + @meter.region.name %>
         
-        <% if @meter.subregion != "" %>
+      <% if @meter.subregion != "" %>
           <%= image_tag('chevron-right', class: 'menu_icon') + @meter.subregion %>
-        <% end %>
+      <% end %>
         
-        <%= image_tag('chevron-right', class: 'menu_icon') + @meter.profile.split(".xls")[0] %>
+      <%= image_tag('chevron-right', class: 'menu_icon') + @meter.profile.split(".xls")[0] %>
     </h4>
     <h6>Акаунт - <%= @meter.account %></h6>
     <h6>Номер счётчика - <%= @meter.number %></h6>
