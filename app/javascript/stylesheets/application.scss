@@ -3,6 +3,7 @@
 
 
 $color-filter: invert(30%) sepia(70%) saturate(2970%) hue-rotate(200deg) brightness(103%) contrast(107%); /*#007bfe*/
+$exit-icon-filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%); /*white*/
 $link-color: black;
 
 .center {
@@ -43,6 +44,26 @@ $link-color: black;
 
 .link-nested:hover {
   filter: $color-filter;
+}
+
+.username{
+  color: white;
+  padding-right: 10px;
+}
+
+.exit_btn {
+  color: white;
+  text-decoration: none;
+}
+
+.exit_btn:hover {
+  color: #a4a4a4;
+  text-decoration: none;
+}
+
+.exit_icon {
+  height: 18px;
+  filter: $exit-icon-filter;
 }
 
 

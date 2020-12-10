@@ -39,9 +39,9 @@
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
           <% if current_user %>
-            <%= current_user.email %>
-            <%= link_to "Выйти", destroy_user_session_path, method: :delete %> 
-            <%= image_tag('log-out', class: 'menu_icon') %>
+            <span class='username'><%= current_user.email%></span>
+            <%= link_to "Выйти", destroy_user_session_path, method: :delete, class: 'exit_btn'%> 
+            <%= image_tag('log-out', class: 'exit_icon') %>
           <% end %>
         </li>
       </ul>
