@@ -1,0 +1,17 @@
+<% content_for :title, "Добавить новый регион" %>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Добавить новый регион</h1>
+</div>
+
+
+<%= form_for @region do |f| %>
+
+  <div class="form-group row">
+    <%= f.label :Название %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "Region", class: 'form-control' %>
+  </div>
+
+  <%= f.submit "Добавить", class: 'btn btn-success' %>
+  <%= link_to "Отмена", regions_path, class: 'btn btn-secondary' %>
+
+<% end %>

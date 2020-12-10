@@ -1,0 +1,44 @@
+<% content_for :title, "Точки учёта | " + @region.name%>
+<div class="table-responsive">
+
+  <!-- Meters -->
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    <h1 class="h2">Точки учёта <%= @region.name %></h1>
+  </div>
+
+  <table class="table table-striped table-sm" style="font-size: 12px; ">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th><%= link_to "Профиль", :sort => "profile" %></th>
+        <th><%= link_to "Название подключения", :sort => "name" %></th>
+        <th><%= link_to "Регион", :sort => "region_id" %></th>
+        <th><%= link_to "Акаунт", :sort => "account" %></th>
+        <th><%= link_to "Потребитель", :sort => "subregion" %></th>
+        <th><%= link_to "Номер счётчика", :sort => "number" %></th>
+        <th><%= link_to "Kt", :sort => "kt" %></th>
+        <th></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <% @meters.each_with_index do |meter, index| %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= meter.profile %></td>
+          <td><%= meter.name %></td>
+          <td><%= meter.region.name %></td>
+          <td><%= meter.account %></td>
+          <td><%= meter.subregion %></td>
+          <td><%= meter.number %></td>
+          <td><%= meter.kt %></td>
+          <td style="text-align: right;">
+            <%= link_to "Открыть", day_meter_path(meter), :class => "btn btn-outline-success btn-xs", :role => "button" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
+

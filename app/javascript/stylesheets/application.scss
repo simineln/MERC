@@ -1,0 +1,56 @@
+@import "~bootstrap/scss/bootstrap";
+
+
+
+$color-filter: invert(30%) sepia(70%) saturate(2970%) hue-rotate(200deg) brightness(103%) contrast(107%); /*#007bfe*/
+$link-color: black;
+
+.center {
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.menu_icon {
+  height: 18px;
+  padding-right: 6px;
+}
+
+.nav-link {
+  color: $link-color !important;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  filter: $color-filter;
+}
+
+.link-active {
+  filter: $color-filter;
+  font-weight: bold !important;
+}
+
+.link {
+  color: $link-color;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+.link-nested {
+  color: $link-color !important;
+  text-decoration: none !important;
+}
+
+.link-nested:hover {
+  filter: $color-filter;
+}
+
+
+/*Bootstrap modificators*/
+.btn-group-xs > .btn, .btn-xs {
+  padding: .25rem .4rem;
+  font-size: .875rem;
+  line-height: .5;
+  border-radius: .2rem;
+}
+

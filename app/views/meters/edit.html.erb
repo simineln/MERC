@@ -1,0 +1,49 @@
+<% content_for :title, "Заменить счётчик" %>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Заменить счётчик</h1>
+</div>
+
+
+<%= form_for @meter do |f| %>
+
+  <div class="form-group row">
+    <%= f.label "Профиль" %>
+    <%= f.text_field :profile, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "Название подключения"%>
+    <%= f.text_field :name, autofocus: true, autocomplete: "Название подключения", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "Номер счётчика" %>
+    <%= f.number_field :number, autofocus: true, autocomplete: "Номер счётчика", class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label "Регион" %>
+    <%= f.select :region_id, Region.all.collect {|x| [x.name, x.id]}, {:include_blank => "Выберите Регион"}, class: "form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "Потребитель" %>
+    <%= f.text_field :subregion, autofocus: true, autocomplete: "Потребитель", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "Акаунт" %>
+    <%= f.text_field :account, autofocus: true, autocomplete: "Акаунт", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label :kt %>
+    <%= f.number_field :kt, autofocus: true, autocomplete: "Transformation Coefficient", class: 'form-control' %>
+  </div>
+  
+  <br>
+
+  <%= f.submit "Добавить", class: 'btn btn-success' %>
+  <%= link_to "Отмена", meters_path, class: 'btn btn-secondary' %>
+
+<% end %>
