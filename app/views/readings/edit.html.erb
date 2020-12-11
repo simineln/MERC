@@ -1,2 +1,44 @@
-<h1>Readings#edit</h1>
-<p>Find me in app/views/readings/edit.html.erb</p>
+<% content_for :title, "Изменить показания" %>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Изменить показания счётчика</h1>
+</div>
+
+
+<%= form_for @reading do |f| %>
+
+  <div class="form-group row">
+    <%= f.label "AEC+" %>
+    <%= f.number_field :aec_p, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "AEC-" %>
+    <%= f.number_field :aec_m, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "REC+" %>
+    <%= f.number_field :rec_p, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "REC-" %>
+    <%= f.number_field :rec_m, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "AD+" %>
+    <%= f.number_field :ad_p, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+
+  <div class="form-group row">
+    <%= f.label "AD-" %>
+    <%= f.number_field :ad_m, autofocus: true, autocomplete: "Профиль", class: 'form-control' %>
+  </div>
+  
+  <br>
+
+  <%= f.submit "Добавить", class: 'btn btn-success' %>
+  <%= link_to "Отмена", hour_meter_path(@meter[0]), class: 'btn btn-secondary' %>
+
+<% end %>

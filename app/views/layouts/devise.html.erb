@@ -1,0 +1,16 @@
+<head>
+  <title>Dashboard MERC | Login</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_pack_tag 'login', media: 'all' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= favicon_link_tag asset_path('fav.png') %>
+</head>
+
+
+<body>
+  <div class="container text-center">
+    <%= yield %>
+  </div>
+</body>

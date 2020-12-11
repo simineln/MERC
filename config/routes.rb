@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   resources :reports
   resources :readings
 
-  root to: 'regions#index'
+  root to: 'meters#index'
 end

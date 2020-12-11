@@ -40,6 +40,5 @@ reading do
   THD_U: float
   THD_I: float
 
-readings = Reading.new(meter_id: @meter.id, date: date, aec_p: aec_p, aec_m: aec_m, rec_p: rec_p, rec_m: rec_m)
 
-Reading.new(meter_id: @meter.id, date: date, ad_p: ad_p, ad_m: ad_m, rd_p: rd_p, rd_m: rd_m, aec_p: aec_p, aec_m: aec_m, rec_p: rec_p, rec_m: rec_m, vph1: vph1, vph2: vph2, vph3: vph3, iph1: iph1, iph2: iph2, iph3: iph3, cosPHI: cosPHU, THD_U: thd_u, THD_I: thd_i)
+:meter_id, :date, :ad_p, :ad_m, :rd_p, :rd_m, :aec_p, :aec_m, :rec_p, :rec_m, :vph1, :vph2, :vph3, :iph1, :iph2, :iph3, :cosPHI, :THD_U, :THD_I
