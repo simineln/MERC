@@ -1,0 +1,39 @@
+Meter details
+Profile: <%= @meter.name %>
+Meter Number: <%= @meter.number %>
+Meter ID: <%= @meter.id %>
+Parameter: AD+
+
+--------------------------
+
+<?xml version="1.0" encoding="utf-8" ?>
+<MeasurementValueDocument DtdRelease="1" DtdVersion="0">
+  <DocumentIdentification v="MERC_DOC_54"/>
+  <DocumentVersion v="1"/>
+  <DocumentType v="A45"/>
+  <ProcessType v="A20"/>
+  <SenderIdentification v="test_admin" codingScheme="A01"/>
+  <SenderRole v="A04"/>
+  <ReceiverIdentification v="moldelectrica_test" codingScheme="A01"/>
+  <ReceiverRole v="A04"/>
+  <DocumentDateTime v="<%=Time.current %>"/>
+  <MeasurementPeriod v="<%= @date%>/<%= @date + 1 %>"/>
+  <MeasurementTimeSeries>  <SendersTimeSeriesIdentification v="test_Zcode"/>
+    <BusinessType v="A65"/>
+    <Product v="8716867000030"/>
+    <InArea v="test_area1" codingScheme="A01"/>
+    <OutArea v="test_area2" codingScheme="A01"/>
+    <SourcePartyIdentification v="test" codingScheme="A01"/>
+    <MeasurementIdentification v="test_Zcode" codingScheme="A01"/>
+    <MeasurementUnit v="MWH"/>
+    <Period>  <TimeInterval v="<%= @date%>/<%= @date + 1 %>"/>
+      <Resolution v="PT1H"/>
+      <% @readings.each_with_index do |reading, index| %>
+        <Interval>  <Pos v="<%=index + 1 %>"/>
+          <Qty v="<%=reading.ad_p %>"/>
+          <Qual v="A04"/>
+        </Interval>
+      <% end %>
+    </Period>
+</MeasurementValueDocument>
+

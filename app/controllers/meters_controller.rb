@@ -53,6 +53,16 @@ class MetersController < ApplicationController
     @aec_sum = [@readings.sum(:aec_p), @readings.sum(:aec_m)]
     @rec_sum = [@readings.sum(:rec_p), @readings.sum(:rec_m)]
     @ad_sum = [@readings.sum(:ad_p), @readings.sum(:ad_m)]
+    
+
+    if params[:email]
+      @email_address = params[:email]
+      # XmlMailer.with(meter: @meter).new_xml_email.deliver_later
+      XmlMailer.with(meter: @meter).new_xml_email.deliver_later
+
+      flash[:notice] = 'XML отправлен на email ' + @email_address
+
+    end
   end
 
   def day
@@ -82,6 +92,7 @@ class MetersController < ApplicationController
 
     if params[:datepicker]
       daterange = params[:daterange].split("to")
+      @date = daterange[0]
       @readings = Reading.where(meter_id: @meter.id).where(date: daterange[0].to_date..daterange[-1].to_date + 1)
     else
       @readings = Reading.where(meter_id: @meter.id)
@@ -98,6 +109,8 @@ class MetersController < ApplicationController
     @rec = [@readingsMonth.sum(:rec_p), @readingsMonth.sum(:rec_m)]
     @ad = [@readingsMonth.sum(:ad_p), @readingsMonth.sum(:ad_m)]
   end
+
+
 
   private def meter_params
     params.require(:meter).permit(:profile, :name, :number, :account, :region_id, :type, :kt, :inverted, :subregion, :account)

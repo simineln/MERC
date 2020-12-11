@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get 'hour'
       get 'day'
       get 'month'
+      get 'xml_generator'
     end
   end
 
