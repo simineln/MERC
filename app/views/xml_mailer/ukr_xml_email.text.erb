@@ -1,0 +1,7 @@
+Date: <%= @date %>
+Parameter: AEC+
+Profiles:
+<% @meters.each_with_index do |meter, index|%>
+  <%= (index+1).to_s + ". " + meter.profile.split(".xls")[0] %>
+<% end %>
+

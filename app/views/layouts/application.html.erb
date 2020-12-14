@@ -17,7 +17,7 @@
 
       <div class='w-100'>
         <% if flash[:notice] %>
-          <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <div class="alert alert-success alert-dismissible fade show" role="alert"  style="margin: 0px 10px">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -26,7 +26,7 @@
         <% end %>
 
         <% if flash[:alert] %>
-          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: 0px 10px">
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -71,6 +71,10 @@
                 </ul>
               </div>
 
+              <li class="nav-item">
+                <%= link_to image_tag('mail', class: 'menu_icon') + "Отправка XML", send_mail_path, class: "nav-link #{'link-active' if params[:controller] == 'send_mail'}" %>
+              </li>
+
               <div class='border-bottom'></div>
 
 
@@ -101,18 +105,3 @@
 
   </body>
 </html>
-
-
-
-
-
-
-               
-
-
-                     <li class="link"> CES</li>
-                  <li class="link">DE</li>
-                  <li class="link">SES</li>
-                  <li class="link">SZES</li>
-                  <li class="link">UES</li>
-                  <li class="link">UKRAINA</li>

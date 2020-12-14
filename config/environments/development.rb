@@ -73,5 +73,37 @@ Rails.application.configure do
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
-  
+
+
+#   config.action_mailer.smtp_settings = {
+#   :address              => "smtp.live.com",
+#   :port                 => 587,
+#   :user_name            => 'siminel.n@live.com',
+#   :password             => '',
+#   :authentication       => 'plain',
+#   :enable_starttls_auto => true
+# }
+
+
+#   config.action_mailer.smtp_settings = {
+#   :address              => "smtp.yandex.ru",
+#   :port                 => 465,
+#   :user_name            => 'simineln',
+#   :password             => 'nikmoi968',
+#   :authentication       => 'plain',
+#   :enable_starttls_auto => true
+# }
+
+
+
+
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "mail.moldelectrica.md",
+  #   :port                 => 587,
+  #   :user_name            => "merc@moldelectrica.md",
+  #   :password             => "MRmrCc2963",
+  #   :authentication       => "plain",
+  #   :enable_starttls_auto => true
+  # }
+
 end

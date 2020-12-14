@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'siminel.n@gmail.com'
+  default from: 'Moldelectrica'
   layout 'mailer'
 end

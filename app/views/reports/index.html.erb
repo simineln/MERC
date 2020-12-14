@@ -20,7 +20,7 @@
       <div class="col-auto">
         <div class="form-inline">
           <%= form_tag reports_path, method: :get do %>
-            <%= text_field_tag 'daterange', params[:daterange], placeholder: 'Выберите дату', class: 'flatpickr' %>
+            <%= text_field_tag 'daterange', params[:daterange], placeholder: 'Выберите дату', class: 'datepicker' %>
             <%= submit_tag 'Выбрать', name: :datepicker, class: 'btn-primary btn-sm' %>
           <% end %>
         </div>

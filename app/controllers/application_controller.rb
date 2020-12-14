@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!, :nav, :reading_init#, :meter_init
+  before_action :authenticate_user!, :nav#:reading_init#, :meter_init
 
   def nav
     @regions = Region.order(:name)
@@ -17,7 +17,10 @@ class ApplicationController < ActionController::Base
         profiles = Dir.glob("#{days[0]}**/*.xls")
         profiles.each do |profile|
           xls = Roo::Spreadsheet.open(profile)
-          profile_name = profile.split("/")[-1]
+          profile_hlp = profile.split("/")
+          profile_name = profile_hlp[-1]
+          profile_region = profile_hlp[4]
+
           meter_num = xls.sheet('Report').row(9)[2].to_i
           meter_name = xls.sheet('Report').row(10)[2].to_s
           account = xls.sheet('Report').row(4)[2].to_s
@@ -26,14 +29,13 @@ class ApplicationController < ActionController::Base
           inverted = false
 
           regions.each do |region|
-            if profile.upcase.include? region.name
-              @region_id = region.id.to_i
+            if profile_region.upcase.eql? region.name.upcase
+              @region_id = region.id
 
               @subregion = profile.split(day+region.name)[-1].split("/")[1]
               if @subregion.include? ".xls" or @subregion == "2020"
                 @subregion = ""
               end
-              break
             end
           end
 

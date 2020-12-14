@@ -9,6 +9,8 @@ require("@rails/activestorage").start()
 require("channels")
 require("chartkick")
 require("chart.js")
+require("nokogiri")
+
 
 
 
