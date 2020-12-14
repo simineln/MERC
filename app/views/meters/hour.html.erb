@@ -35,12 +35,12 @@
         </div>
       </div>
 
+        <% if false %>
       <div class='col-auto' style='padding-top: 5px'>
         <span class='nav-item'>
          <%= link_to image_tag('mail', class: 'menu_icon') + "Сгенерировать и отправить XML", request.original_url + '&email=siminel.n@gmail.com', class: "nav-link}" %>
        </span>
 
-        <% if false %>
         <div class="form-inline">
           <%= form_tag hour_meter_path, method: :get do %>
             <%= email_field_tag 'email', params[:email], placeholder: 'Введите e-mail', class: 'form-control' %>

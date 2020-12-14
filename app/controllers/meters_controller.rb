@@ -55,14 +55,14 @@ class MetersController < ApplicationController
     @ad_sum = [@readings.sum(:ad_p), @readings.sum(:ad_m)]
     
 
-    if params[:email]
-      @email_address = params[:email]
-      # XmlMailer.with(meter: @meter).new_xml_email.deliver_later
-      XmlMailer.with(meter: @meter).new_xml_email.deliver_later
+    # if params[:email]
+    #   @email_address = params[:email]
+    #   # XmlMailer.with(meter: @meter).new_xml_email.deliver_later
+    #   XmlMailer.with(meter: @meter).new_xml_email.deliver_later
 
-      flash[:notice] = 'XML отправлен на email ' + @email_address
+    #   flash[:notice] = 'XML отправлен на email ' + @email_address
 
-    end
+    # end
   end
 
   def day
