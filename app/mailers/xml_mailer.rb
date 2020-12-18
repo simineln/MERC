@@ -128,8 +128,7 @@ class XmlMailer < ApplicationMailer
 
     mail(to: "siminel.n@gmail.com", subject: "Test XML profiles from MERC, date: " + @date.to_s)
     # mail(to: "svnik@moldelectrica.md", subject: "Test XML profiles from MERC, date: " + @date.to_s)
-    # mail(to: "simineln@yandex.ru", subject: "Test XML profiles from MERC, date: " + @date.to_s)
-    #mail(to: "siminel.n@gmail.com", subject: "Test XML profiles from MERC, date: " + @date.to_s)
+    # mail(to: "svnik@moldelectrica.md", subject: "Test XML profiles from MERC, date: " + @date.to_s)
 
   end
 
@@ -148,6 +147,9 @@ class XmlMailer < ApplicationMailer
       @readings = Reading.where(meter_id: meter.id).where(date: @date..@date+1).limit(24)
 
       mail(to: "siminel.n@gmail.com", subject: "Test JSON profiles from MERC, date: " + @date.to_s)
+    # mail(to: "svnik@moldelectrica.md", subject: "Test XML profiles from MERC, date: " + @date.to_s)
+    # mail(to: "svnik@moldelectrica.md", subject: "Test XML profiles from MERC, date: " + @date.to_s)
+      
 
     end
 
