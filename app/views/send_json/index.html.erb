@@ -1,10 +1,10 @@
-<% content_for :title, "Обмен данными | XML ENTSO-E" %>
+<% content_for :title, "Обмен данными | JSON" %>
 
 <br>
 <div class="row">
   <div class="col-md-12 table-responsive">
 
-    <h4>Отправка XML ENTSO-E</h4>
+    <h4>Отправка JSON</h4>
 
     <div class="border-bottom"></div>
     <br>
@@ -12,7 +12,7 @@
     <div class="row">
       <div class="col-auto">
         <div class="form-inline">
-          <%= form_tag send_mail_path, method: :get do %>
+          <%= form_tag send_json_path, method: :get do %>
             <%= text_field_tag 'daterange', params[:daterange], placeholder: 'Выберите дату', class: 'datepicker' %>
             <%= submit_tag 'Выбрать', name: :datepicker, class: 'btn-primary btn-sm' %>
           <% end %>
@@ -34,16 +34,16 @@
       </thead>
       <tbody>
         <tr>
-          <td>UKRAINA</td>
+          <td>CET-2</td>
           <td>
             <% @meters.each_with_index do |meter, index| %>
               <%= (index+1).to_s + ". " %>
               <%= link_to meter.profile, hour_meter_path(meter) %><br>
             <% end %>
           </td>
-          <td>XML</td>
+          <td>JSON</td>
           <td></td>
-          <td style="text-align: right;"><%= link_to image_tag('send', class: 'menu_icon') + "Сгенерировать и отправить XML", request.original_url + '&send=UKR' %></td>
+          <td style="text-align: right;"><%= link_to image_tag('send', class: 'menu_icon') + "Сгенерировать и отправить JSON", request.original_url + '&send=JSON' %></td>
         </tr>
       </tbody>
     </table>

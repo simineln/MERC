@@ -1,0 +1,39 @@
+Date: <%= @date %>
+Parameter: Active Power
+
+
+{
+"DocumentDateTime": {
+      "@v": "<%= Time.current.strftime("%Y-%m-%dT%H:%M:%SZ") %>"
+   },
+   "MeasurementPeriod": {
+      "@v": "<%= @date.to_s + "T00:00Z/" + (@date+1).to_s+"T00:00Z" %>"
+   },
+   "MeasurementTimeSeries": [
+      {
+         "MeasurementUnit": {
+            "@v": "MWH"
+         },
+         "Period": {
+            "TimeInterval": {
+               "@v": "<%= @date.to_s + "T00:00Z/" + (@date+1).to_s+"T00:00Z" %>"
+            },
+            "Resolution": {
+               "@v": "PT60M"
+            },
+            "Interval": [
+              <% @readings.each_with_index do |reading, index| %>
+               {
+                  "Pos": {
+                     "@v": "<%= index +1 %>"
+                  },
+                  "Qty": {
+                     "@v": "<%= reading.ad_p %>"
+                  },
+               },
+               <% end %>
+            ]
+         }
+      },
+   ]
+}

@@ -1,0 +1,2 @@
+module SendJsonHelper
+end

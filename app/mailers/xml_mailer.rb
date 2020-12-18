@@ -45,8 +45,9 @@ class XmlMailer < ApplicationMailer
     xml_lib = 'lib/xml/UKRAINA/' + date_dir
     system 'mkdir', '-p', (xml_lib)
 
-    @meters.each do |meter|
-      fname = meter.profile.split('.xls')[0].to_s + '_' + @date.to_s + '.xml'
+    @meters.each_with_index do |meter, index|
+      # fname = meter.profile.split('.xls')[0].to_s + '_' + @date.to_s + '.xml'
+      fname = @date.strftime("%Y%m%d") + "_SOMA_" + sender + "_" + receiver + "_" + (sprintf '%03d', index + 1) + ".xml"
       readings = Reading.where(meter_id: meter.id).where(date: @date..@date+1).limit(24)
 
       tcodes.each do |key, value|
@@ -57,7 +58,7 @@ class XmlMailer < ApplicationMailer
 
       xml = Nokogiri::XML::Builder.new(:encoding => 'utf-8') { |xml|
         xml.MeasurementValueDocument('DtdRelease' => '1', 'DtdVersion' => '0') do
-          xml.DocumentIdentification('v' => 'SOMA_' + @date.to_s + '_MD_UA')
+          xml.DocumentIdentification('v' => 'SOMA-' + @date.strftime("%Y%m%d") + '_MD_UA')
           xml.DocumentVersion('v' => "1")
           xml.DocumentType('v' => "A45")
           xml.ProcessType('v' => "A20")
@@ -79,7 +80,7 @@ class XmlMailer < ApplicationMailer
             xml.MeasurementUnit('v' => "MWH")
             xml.Period do
               xml.TimeInterval('v' => @date.to_s + "T00:00Z/" + (@date+1).to_s+"T00:00Z")
-              xml.Resolution(v="PT1H")
+              xml.Resolution('v' => "PT60M")
               
               readings.each_with_index do |reading, index|
                 xml.Interval do 
@@ -101,7 +102,7 @@ class XmlMailer < ApplicationMailer
             xml.MeasurementUnit('v' => "MWH")
             xml.Period do
               xml.TimeInterval('v' => @date.to_s + "T00:00Z/" + (@date+1).to_s+"T00:00Z")
-              xml.Resolution(v="PT1H")
+              xml.Resolution('v' => "PT60M")
               
               readings.each_with_index do |reading, index|
                 xml.Interval do 
@@ -129,6 +130,28 @@ class XmlMailer < ApplicationMailer
     # mail(to: "svnik@moldelectrica.md", subject: "Test XML profiles from MERC, date: " + @date.to_s)
     # mail(to: "simineln@yandex.ru", subject: "Test XML profiles from MERC, date: " + @date.to_s)
     #mail(to: "siminel.n@gmail.com", subject: "Test XML profiles from MERC, date: " + @date.to_s)
+
+  end
+
+
+  def cet_json_email
+    @date = params[:date].to_date
+    @meters = Meter.where(subregion: "CET_2")
+
+    date_dir = @date.year.to_s + "/" + @date.month.to_s + "/" + @date.day.to_s + "/"
+    json_lib = 'lib/json/CET_2/' + date_dir
+    system 'mkdir', '-p', (json_lib)
+
+
+    @meters.each_with_index do |meter, index|
+      fname = meter.profile.split('.xls')[0].to_s + '_' + @date.to_s + '.json'
+      @readings = Reading.where(meter_id: meter.id).where(date: @date..@date+1).limit(24)
+
+      mail(to: "siminel.n@gmail.com", subject: "Test JSON profiles from MERC, date: " + @date.to_s)
+
+    end
+
+
 
   end
 end

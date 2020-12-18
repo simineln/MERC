@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MeasurementValueDocument DtdRelease="1" DtdVersion="0">
+  <DocumentIdentification v="SOMA-20201013_MD_UA"/>
+  <DocumentVersion v="1"/>
+  <DocumentType v="A45"/>
+  <ProcessType v="A20"/>
+  <SenderIdentification v="10X1001C--00002V" codingScheme="A01"/>
+  <SenderRole v="A04"/>
+  <ReceiverIdentification v="10X1001C--00001X" codingScheme="A01"/>
+  <ReceiverRole v="A04"/>
+  <DocumentDateTime v="2020-12-17T16:37:56Z"/>
+  <MeasurementPeriod v="2020-10-13T00:00Z/2020-10-14T00:00Z"/>
+  <Domain codingScheme="A01" v="10Y1001A1001A990"/>
+  <MeasurementTimeSeries>
+    <SendersTimeSeriesIdentification v="AP_I_64T-MDUA-OCNSHTA"/>
+    <BusinessType v="A65"/>
+    <Product v="8716867000030"/>
+    <InArea v="10X1001C--00002V" codingScheme="A01"/>
+    <OutArea v="10X1001C--00001X" codingScheme="A01"/>
+    <SourcePartyIdentification v="10X1001C--00002V" codingScheme="A01"/>
+    <MeasurementIdentification v="64T-MDUA-OCNSHTA" codingScheme="A01"/>
+    <MeasurementUnit v="MWH"/>
+    <Period>
+      <TimeInterval v="2020-10-13T00:00Z/2020-10-14T00:00Z"/>
+      <Resolution v="PT60M"/>
+      <Interval>
+        <Pos v="1"/>
+        <Qty v="1.9536"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="2"/>
+        <Qty v="1.716"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="3"/>
+        <Qty v="2.0196"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="4"/>
+        <Qty v="3.6564"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="5"/>
+        <Qty v="5.2536"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="6"/>
+        <Qty v="9.2268"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="7"/>
+        <Qty v="12.2496"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="8"/>
+        <Qty v="7.92"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="9"/>
+        <Qty v="6.2832"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="10"/>
+        <Qty v="4.884"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="11"/>
+        <Qty v="2.1516"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="12"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="13"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="14"/>
+        <Qty v="2.8644"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="15"/>
+        <Qty v="6.7188"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="16"/>
+        <Qty v="8.0916"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="17"/>
+        <Qty v="8.844"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="18"/>
+        <Qty v="14.8236"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="19"/>
+        <Qty v="15.2196"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="20"/>
+        <Qty v="15.6552"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="21"/>
+        <Qty v="14.2956"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="22"/>
+        <Qty v="7.9464"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="23"/>
+        <Qty v="8.9232"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="24"/>
+        <Qty v="4.3428"/>
+        <Qual v="A04"/>
+      </Interval>
+    </Period>
+  </MeasurementTimeSeries>
+  <MeasurementTimeSeries>
+    <SendersTimeSeriesIdentification v="AP_E_64T-MDUA-OCNSHTA"/>
+    <BusinessType v="A65"/>
+    <Product v="8716867000030"/>
+    <InArea v="10X1001C--00002V" codingScheme="A01"/>
+    <OutArea v="10X1001C--00001X" codingScheme="A01"/>
+    <SourcePartyIdentification v="10X1001C--00002V" codingScheme="A01"/>
+    <MeasurementIdentification v="64T-MDUA-OCNSHTA" codingScheme="A01"/>
+    <MeasurementUnit v="MWH"/>
+    <Period>
+      <TimeInterval v="2020-10-13T00:00Z/2020-10-14T00:00Z"/>
+      <Resolution v="PT60M"/>
+      <Interval>
+        <Pos v="1"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="2"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="3"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="4"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="5"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="6"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="7"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="8"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="9"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="10"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="11"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="12"/>
+        <Qty v="1.0824"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="13"/>
+        <Qty v="0.99"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="14"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="15"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="16"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="17"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="18"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="19"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="20"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="21"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="22"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="23"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+      <Interval>
+        <Pos v="24"/>
+        <Qty v="0.0"/>
+        <Qual v="A04"/>
+      </Interval>
+    </Period>
+  </MeasurementTimeSeries>
+</MeasurementValueDocument>

@@ -16,7 +16,10 @@ Rails.application.routes.draw do
 
   resources :reports
   resources :readings
+
   get 'send_mail' => 'send_mail#index'
+  get 'send_json' => 'send_json#index'
+
 
   root to: 'meters#index'
 
