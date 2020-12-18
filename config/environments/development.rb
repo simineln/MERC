@@ -63,6 +63,8 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   host = 'localhost:3000' #replace with your own url
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  #host = 'localhost:3000' #replace with your own url
+  #config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
@@ -73,6 +75,16 @@ Rails.application.configure do
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
+
+
+# config.action_mailer.smtp_settings = {
+#   :address              => "mail.moldelectrica.md",
+#   :port                 => 587,
+#   :user_name            => "merc@moldelectrica.md",
+#   :password             => "MRmrCc2963",
+#   :authentication       => "plain",
+#   :enable_starttls_auto => true
+# }
 
 
 #   config.action_mailer.smtp_settings = {
@@ -96,14 +108,5 @@ Rails.application.configure do
 
 
 
-
-  # config.action_mailer.smtp_settings = {
-  #   :address              => "mail.moldelectrica.md",
-  #   :port                 => 587,
-  #   :user_name            => "merc@moldelectrica.md",
-  #   :password             => "MRmrCc2963",
-  #   :authentication       => "plain",
-  #   :enable_starttls_auto => true
-  # }
 
 end
